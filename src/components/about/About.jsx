@@ -1,9 +1,6 @@
 import React from 'react'
 import './about.css'
-import ME from '../../assets/me.png'
-import { FaAward } from 'react-icons/fa'
-import { FiUsers } from 'react-icons/fi'
-import { AiFillFolderOpen } from 'react-icons/ai'
+import ME from '../../assets/me2.jpg'
 
 const About = () => {
   return (
@@ -20,30 +17,13 @@ const About = () => {
 
         <div className="about__content">
 
-          <div className="about__cards">
-            <article className="about__card">
-              <FaAward className='about__icon' />
-              <h5>Experience</h5>
-              <small>3 Years Working</small>
-
-            </article>
-            <article className="about__card">
-              <FiUsers className='about__icon' />
-              <h5>Clients</h5>
-              <small>0</small>
-
-            </article>
-            <article className="about__card">
-              <AiFillFolderOpen className='about__icon' />
-              <h5>Projects</h5>
-              <small>Many many</small>
-
-            </article>
-          </div>
+          <h4>Hi there!</h4>
 
           <p>
-            Text here asdasd ads  asdas da dsadsadsads ads a dsasda das ad a d
-            Text here asdasd ads  asdas da dsadsadsads ads a dsasda das ad a d
+            My name is Mitja, I'm a Multimedia Developer currently employed at Upknowledge.
+          </p>
+          <p>
+            I have 3 years of recent Unity Development experience. Before that I studied and worked with all things media, such as animations, video production and graphic design.
           </p>
 
           <a href="#contact" className='btn btn-primary'>Contact me</a>

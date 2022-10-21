@@ -14,17 +14,12 @@
 }
 
 .about__me-image {
-    padding: 2rem;
-    border-radius: 5rem;
+    border-radius: 2rem;
     overflow: hidden;
-    transform: rotate(10deg);
-    transition: var(--transition);
+    align-content: center;
 }
 
-.about__me-image:hover {
-    transform: rotate(0);
-    padding: 1rem;
-}
+
 
 .about__cards {
     display: grid;

@@ -1,54 +1,68 @@
 import React from 'react'
 import './portfolio.css'
-import IMG1 from '../../assets/space.jpg'
-import IMG2 from '../../assets/slash.jpg'
-import IMG3 from '../../assets/splash.png'
-import IMG4 from '../../assets/cow.jpg'
-import IMG5 from '../../assets/abra.jpg'
-import IMG6 from '../../assets/space.jpg'
+import ImgSplash from '../../assets/splash.png'
+import ImgBlindSpot from '../../assets/blindspot.png'
+import ImgMomSim from '../../assets/momsim.png'
+import ImgStealthRaccoon from '../../assets/apple.jpg'
+import ImgNutNibblers from '../../assets/nibbler.png'
+import ImgHome from '../../assets/home.jpg'
+import ImgSmallSteps from '../../assets/space.jpg'
+import ImgAbraccoon from '../../assets/abra.jpg'
 
 const data = [
   {
+    id: 0,
+    image: ImgSplash,
+    title: 'Splash',
+    github: 'https://github.com/mitjaimmonen/Splash',
+    demo: 'https://jgranger.itch.io/splash'
+  },
+  {
     id: 1,
-    image: IMG1,
-    title: 'Game Jam Project',
-    github: 'https://github.com',
-    demo: 'https://itch.io'
+    image: ImgBlindSpot,
+    title: 'Blind Spot VR Gallery',
+    github: 'https://github.com/mitjaimmonen/VR-Gallery-TAMK'
   },
   {
     id: 2,
-    image: IMG2,
-    title: 'Game Jam Project',
-    github: 'https://github.com',
-    demo: 'https://itch.io'
+    image: ImgMomSim,
+    title: 'Mom Simulator',
+    github: 'https://github.com/mitjaimmonen/MomSimulator'
   },
   {
     id: 3,
-    image: IMG3,
-    title: 'Game Jam Project',
-    github: 'https://github.com',
-    demo: 'https://itch.io'
+    image: ImgStealthRaccoon,
+    title: 'Apple Rascal',
+    github: 'https://github.com/mitjaimmonen/StealthAppleThiefRascalWithGrandmasAndDogs',
+    demo: 'https://rascalsgames.itch.io/apple-rascal'
   },
   {
     id: 4,
-    image: IMG4,
-    title: 'Game Jam Project',
-    github: 'https://github.com',
-    demo: 'https://itch.io'
+    image: ImgNutNibblers,
+    title: 'Nut Nibblers',
+    github: 'https://github.com/mitjaimmonen/LudumDare45',
+    demo: 'https://rascalsgames.itch.io/nut-nibblers'
   },
   {
     id: 5,
-    image: IMG5,
-    title: 'Game Jam Project',
-    github: 'https://github.com',
+    image: ImgHome,
+    title: 'H O M E',
+    github: 'https://github.com/mitjaimmonen/H-O-M-E',
     demo: 'https://itch.io'
   },
   {
     id: 6,
-    image: IMG6,
-    title: 'Game Jam Project',
-    github: 'https://github.com',
-    demo: 'https://itch.io'
+    image: ImgSmallSteps,
+    title: 'Small Steps',
+    github: 'https://github.com/mitjaimmonen/SmallSteps',
+    demo: 'https://rascalsgames.itch.io/small-steps'
+  },
+  {
+    id: 7,
+    image: ImgAbraccoon,
+    title: 'Ab-Raccoon-Dabra',
+    github: 'https://github.com/mitjaimmonen/SomeRaccoonsCastSpells',
+    demo: 'https://rascalsgames.itch.io/abraccoon-dabra'
   }
 ]
 
@@ -60,19 +74,35 @@ const Portfolio = () => {
 
       <div className="container portfolio__container">
         {
-          data.map(({id, image, title, github, demo}) => {
-            return (
-              <article key={id} className='portfolio__item'>
-                <div className="portfolio__item-image">
-                  <img src={image} alt={title} />
-                </div>
-                <h3>{title}</h3>
-                <div className="portfolio__item-cta">
-                  <a href={github} rel="noreferrer" className='btn' target='_blank'>GitHub</a>
-                  <a href={demo} rel="noreferrer" className='btn' target='_blank'>Itch</a>
-                </div>
-              </article>
-            )
+          data.map(({ id, image, title, github = '', demo = '' }) => {
+            if (demo === '') {
+              return (
+                <article key={id} className='portfolio__item'>
+                  <div className="portfolio__item-image">
+                    <img src={image} alt={title} />
+                  </div>
+                  <h3>{title}</h3>
+                  <div className="portfolio__item-cta">
+                    <a href={github} rel="noreferrer" className='btn' target='_blank'>GitHub</a>
+                  </div>
+                </article>
+              )
+            }
+            else {
+              return (
+                <article key={id} className='portfolio__item'>
+                  <div className="portfolio__item-image">
+                    <img src={image} alt={title} />
+                  </div>
+                  <h3>{title}</h3>
+                  <div className="portfolio__item-cta">
+                    <a href={github} rel="noreferrer" className='btn' target='_blank'>GitHub</a>
+                    <a href={demo} rel="noreferrer" className='btn' target='_blank'>Itch.Io</a>
+                  </div>
+                </article>
+              )
+
+            }
           })
         }
       </div>
