@@ -64,7 +64,7 @@ h1 {
 
 section {
     padding-top: 2rem;
-    margin-top: 2rem;
+    margin-top: 4rem;
 }
 
 section > h2, section > h5 {
@@ -119,7 +119,7 @@ img {
 
 .header-separator {
     width: var(--container-width-lg);
-    margin: 0.5rem auto 2rem auto;
+    margin: 1rem auto 4rem auto;
     height: 1px;
     background: var(--color-primary)
 }
