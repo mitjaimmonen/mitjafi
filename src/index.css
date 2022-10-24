@@ -38,6 +38,8 @@ body {
     background: var(--color-bg);
     color: var(--color-white);
     line-height: 1.7;
+    display: flex;
+    align-content: center;
     /* background-image: url(../src/assets/bg.png); */
 }
 
@@ -61,7 +63,8 @@ h1 {
 }
 
 section {
-    margin-top: 8rem;
+    padding-top: 2rem;
+    margin-top: 2rem;
 }
 
 section > h2, section > h5 {
@@ -71,7 +74,6 @@ section > h2, section > h5 {
 
 section > h2 {
     color: var(--color-primary);
-    padding-bottom: 2rem;
 }
 
 .text-light {
@@ -113,6 +115,13 @@ img {
     display: block;
     width: 100%;
     object-fit: cover;
+}
+
+.header-separator {
+    width: var(--container-width-lg);
+    margin: 0.5rem auto 2rem auto;
+    height: 1px;
+    background: var(--color-primary)
 }
 
 

@@ -1,6 +1,5 @@
 header {
     height: 100vh;
-    padding-top: 7rem;
     overflow: hidden;
 }
 
@@ -8,6 +7,11 @@ header {
     text-align: center;
     height: 100%;
     position: relative;
+}
+
+.header__container-top {
+    height: 40vh;
+    padding-top: 7rem;
 }
 
 /* ========== CTA ========== */
@@ -40,21 +44,32 @@ header {
 
 
 /* ========== ME ========== */
-
-.me {
-    background: linear-gradient(var(--color-primary), transparent);
-    width: 22rem;
-    height: 26rem;
-    position: absolute;
-    left: calc(50% - 11rem);
-    margin-top: 4rem;
-    border-radius: 12rem 12rem 0 0;
-    overflow:visible;
+.header__container-bottom {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    align-content: center;
+    margin: 0 auto;
+    margin: auto;
     padding: 0;
 }
+
+.me {
+    width: 22rem;
+    margin: 0 auto;
+    background: linear-gradient(var(--color-primary), transparent);
+    border-radius: 12rem 12rem 0 0;
+    overflow: visible;
+    height: 80%;
+    position: relative;
+}
+
 .me img {
+    height: 60vh;
+    object-fit: cover;
     position: absolute;
-    top: -4rem;
+    bottom: 0;
+    left: 0;
 }
 
 
@@ -72,14 +87,14 @@ header {
 
 
 
-/* =============== MEDIA QUERIES (MEDIUM DEVICES) =================*/
+/* =============== MEDIA QUERIES =================*/
+
 
 @media screen and (max-width: 1024px) {
     header {
-        height: 68vh;
+        height: 100vh;
     }
 }
-/* =============== MEDIA QUERIES (SMALL DEVICES) =================*/
 
 @media screen and (max-width: 600px) {
     header {
@@ -89,5 +104,29 @@ header {
     .header__socials,
     .scroll__down {
         display: none;
+    }
+
+}
+
+@media screen and (max-height: 800px) {
+
+    .header__container-top {
+        padding-top: 2rem;
+    }
+
+    .me img {
+        height: 60vh;
+        object-fit: contain;
+    }
+}
+
+@media screen and (max-height: 600px) {
+    .header__container-bottom {
+        display: none;
+    }
+
+    .header__container-top {
+        height: 100vh;
+        padding-top: 6rem;
     }
 }
